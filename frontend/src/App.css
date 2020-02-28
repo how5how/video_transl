@@ -1,0 +1,36 @@
+body {
+  /* background-color: black; */
+  background-color: rgb(238, 234, 234);
+}
+
+* {
+  /* color: white; */
+  padding: 8px;
+  /* font-family: menlo; */
+}
+
+
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 12px;
+  width: 200px;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
