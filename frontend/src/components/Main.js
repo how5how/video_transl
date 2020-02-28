@@ -5,7 +5,7 @@ class Main extends React.Component {
     super(props);
 
     this.state = {
-      imageURL: '',
+      imageURL: 'https://heyjeffshaw.com/assets/images/about/past/music.jpg',
     };
 
     this.handleUploadImage = this.handleUploadImage.bind(this);
@@ -30,19 +30,22 @@ class Main extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleUploadImage}>
-        <div>
-          <input ref={(ref) => { this.uploadInput = ref; }} type="file" />
+        <div className="upload-container" >
+         <form className="form" onSubmit={this.handleUploadImage}>
+            <div>
+            <input ref={(ref) => { this.uploadInput = ref; }} type="file" />
+            </div>
+            <div>
+            <input ref={(ref) => { this.fileName = ref; }} type="text" placeholder="Enter the desired name of file" />
+            </div>
+            <br />
+            <div>
+            <button>Upload</button>
+            </div>
+        </form>
+            <img src={this.state.imageURL} alt="img" />
         </div>
-        <div>
-          <input ref={(ref) => { this.fileName = ref; }} type="text" placeholder="Enter the desired name of file" />
-        </div>
-        <br />
-        <div>
-          <button>Upload</button>
-        </div>
-        <img src={this.state.imageURL} alt="img" />
-      </form>
+
     );
   }
 }
